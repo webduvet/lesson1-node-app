@@ -10,8 +10,9 @@ RUN apt-get install --yes npm
 
 RUN mkdir /root/app
 COPY ./app /root/app
-COPY ./startme.sh /root
 WORKDIR /root/app
+
+RUN npm install --production
 
 EXPOSE 3000
 
